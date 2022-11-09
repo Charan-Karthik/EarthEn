@@ -1,0 +1,191 @@
+nav {
+    height: 5rem;
+    width: 100vw;
+    background: rgba(0, 0, 0, 0.335);
+    display: grid;
+    place-items: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 99;
+    border-radius: 0 0 75px 75px;
+}
+
+/* Only show medium or small screen */
+
+.nav__toggle-btn {
+    display: none;
+}
+
+.nav__container {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+@keyframes colorAnimation {
+    0%   {background-color:rgb(165, 131, 131); }
+    25%  {background-color:rgb(255, 255, 167);}
+    50%  {background-color:rgb(167, 167, 252);}
+    75%  {background-color:rgb(170, 255, 170);}
+    100% {background-color:rgb(255, 161, 161);}
+}
+.logo {
+    width: 12rem;
+    padding: 10px;
+    background-color: red;
+    animation: colorAnimation 5s linear 0.5s infinite;
+    border-radius: 0 75px 0 75px;
+}
+
+
+.nav__links {
+    display: flex;
+    gap: 3.5rem;
+}
+
+
+
+.nav__links a {
+    transition: var(--transition);
+}
+.nav__links a:hover {
+    color: yellow;
+}
+
+
+.active-nav {
+    position: relative;
+}
+
+.active-nav::after {
+    content: '';
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    position: absolute;
+    left: calc(50% - 0.6rem);
+    transform: rotate(45deg);
+    margin-top: 1rem;
+    background-color: rgba(0, 0, 0, 0.232);
+
+}
+
+
+/* MEDIA QURIES (MEDIUM and SMALL SCREENsS) */
+
+@media screen and (max-width: 1024px){
+    .nav__toggle-btn {
+        display: inline-block;
+        background: transparent;
+        font-size: 3rem;
+        cursor: pointer;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .nav__toggle-btn svg {
+        color: #fff;
+    }
+
+    .nav__links {
+        height: 100%;
+        position: absolute;
+        top: 100%;
+        right: 20px;
+        flex-direction: column;
+        gap: 0;
+        perspective: 700px;
+        
+    }
+
+    .active-nav, .active-nav::after {
+        display: none;
+    }
+
+    .nav__links li {
+        height: 4rem;
+        width: 100%;
+        box-shadow: -2rem, 2rem, 5rem rgb(0, 0, 0, 0.7);
+        animation:  navAnimation 600ms ease forwards;
+        opacity: 0;
+        transform-origin: top;
+    }
+
+    .nav__links li:nth-child(2) {
+        animation-delay: 200ms;
+    }
+    .nav__links li:nth-child(3) {
+        animation-delay: 400ms;
+    }
+    .nav__links li:nth-child(4) {
+        animation-delay: 600ms;
+    }
+    .nav__links li:nth-child(5) {
+        animation-delay: 800ms;
+    }
+
+    @keyframes navAnimation {
+        to {
+            transform: rotateX(0);
+            opacity: 1;
+        }
+    }
+
+    .nav__links li a {
+        background-color:rgba(0, 0, 0, 0.335);
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem 3rem 1.5rem 3rem;
+
+    }
+
+    .show__nav {
+        display: flex;
+    }
+
+    .hide__nav {
+        display: none;
+    }
+}
+
+@-webkit-keyframes rotating /* Safari and Chrome */ {
+    from {
+        -webkit-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+@keyframes rotating {
+    from {
+        -ms-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    to {
+        -ms-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+.rotating {
+    -webkit-animation: rotating 2s linear infinite;
+    -moz-animation: rotating 2s linear infinite;
+    -ms-animation: rotating 2s linear infinite;
+    -o-animation: rotating 2s linear infinite;
+    animation: rotating 2s linear infinite;
+}

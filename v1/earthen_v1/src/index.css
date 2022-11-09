@@ -1,0 +1,59 @@
+* , *::before, *::after{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+
+:root {
+    --primary-color: rgb(0, 0, 0);
+    --secondary-color: rgb(92, 222, 116);
+    --third: lightblue;
+
+    --container-width-lg: 80%;
+    --container-width-md: 90%;
+    --transition: all 500ms ease;
+}
+
+body{
+color: var(--secondary-color);
+    font-family: 'Jost', sans-serif;
+    line-height: 1.7;
+    overflow-x: hidden;
+    background: var(--third);
+}
+
+.container{
+    width: var(--container-width-lg);
+    max-width: 1920px;
+    margin-inline: auto;
+}
+
+
+h1, h2, h3, h4 h5 {
+    line-height: 1.2;
+    color: #fff;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+a {
+    color: #fff;
+}
+
+
+img {
+    display: block;
+    object-fit: cover;
+    width: 100%;
+}
