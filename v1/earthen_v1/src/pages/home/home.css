@@ -18,6 +18,7 @@ header {
 
 
 /* In the process of figuring how to lay this out */
+/* FEEL FREE to do WHATEVER YOU WANT JACOB =| */
 
 .main__header-container {
     width: calc(100% - 200px);
@@ -48,10 +49,10 @@ header {
     }
 
 
-@media screen and (max-width: 1024px){
+/* @media screen and (max-width: 1024px){
     .main__header-container {
         display: grid;
         grid-template-columns: 1fr;
         
     }
-}
+} */
