@@ -4,7 +4,8 @@ import './navbar.css'
 import { Link, NavLink } from 'react-router-dom'
 import { links } from '../data'
 import { TbWindmill } from 'react-icons/tb'
-import {MdOutlineClose} from 'react-icons/md'
+import { MdOutlineClose } from 'react-icons/md'
+import pin from '../images/earthenImages/pin.png'
 
 const Navbar = () => {
     const [isNavShowing, setIsNavShowing] = useState(false)
@@ -30,9 +31,9 @@ const Navbar = () => {
                     }
                 </ul>
                 <button className='nav__toggle-btn rotating' onClick={() => setIsNavShowing(!isNavShowing)}>
-                    
+
                     {
-                        isNavShowing ? <MdOutlineClose/> : <TbWindmill />
+                        isNavShowing ? <MdOutlineClose /> : <TbWindmill />
                     }
                 </button>
             </div>
