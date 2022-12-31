@@ -1,11 +1,14 @@
-
+import AboutSection from '../../components/AboutSection'
 
 import './about.css'
 
 
 const About = () => {
   return (
-    <div>About</div>
+    <div className="about">
+      <br /><br /><br /><br />
+      <AboutSection/>
+    </div>
   )
 }
 

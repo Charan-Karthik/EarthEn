@@ -31,11 +31,11 @@ const Navbar = () => {
                     }
                 </ul>
                 <button className='nav__toggle-btn rotating' onClick={() => setIsNavShowing(!isNavShowing)}>
-
+                    
                     {
                         isNavShowing ? <MdOutlineClose /> : <TbWindmill />
                     }
-                </button>
+                </Link>
             </div>
         </nav>
     )

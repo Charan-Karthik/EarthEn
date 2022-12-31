@@ -10,9 +10,10 @@
 
 
 :root {
-    --primary-color: rgb(0, 0, 0);
-    --secondary-color: rgb(92, 222, 116);
+    --primary-color: #07376b;
+    --secondary-color: #9AEBA6;
     --third: lightblue;
+    --four: rgb(173, 163, 236);
 
     --container-width-lg: 80%;
     --container-width-md: 90%;
@@ -20,11 +21,13 @@
 }
 
 body{
-color: var(--secondary-color);
-    font-family: 'Jost', sans-serif;
+color: black ;
+font-family: 'Oxygen', sans-serif;
+
     line-height: 1.7;
     overflow-x: hidden;
-    background: var(--third);
+    /* background: var(--third); */
+    overflow: none;
 }
 
 .container{
@@ -57,3 +60,28 @@ img {
     object-fit: cover;
     width: 100%;
 }
+
+
+
+
+
+
+section {
+    margin-top: 10rem;
+}
+
+.section__head {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.section__head span {
+    background: var(--secondary-color);
+    padding: 0.8rem;
+    border-radius: 1rem;
+    color: var(--third);
+    font-size: 1.5rem;
+}
+
+

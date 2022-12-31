@@ -1,7 +1,7 @@
 nav {
     height: 5rem;
     width: 100vw;
-    background: rgba(0, 0, 0, 0.335);
+    background: var(--primary-color);
     display: grid;
     place-items: center;
     position: fixed;
@@ -9,12 +9,17 @@ nav {
     right: 0;
     z-index: 99;
     border-radius: 0 0 75px 75px;
+    border-bottom: 2px solid var(--secondary-color);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.791);
 }
 
 /* Only show medium or small screen */
 
 .nav__toggle-btn {
     display: none;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
 }
 
 .nav__container {
@@ -22,22 +27,23 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: relative;
+    position: absolute;
 }
 
-@keyframes colorAnimation {
+/* @keyframes colorAnimation {
     0%   {background-color:rgb(165, 131, 131); }
     25%  {background-color:rgb(255, 255, 167);}
     50%  {background-color:rgb(167, 167, 252);}
     75%  {background-color:rgb(170, 255, 170);}
     100% {background-color:rgb(255, 161, 161);}
-}
+} */
 .logo {
-    width: 12rem;
+    width: 9rem;
     padding: 10px;
-    background-color: red;
+    background-color: rgb(255, 255, 255);
     animation: colorAnimation 5s linear 0.5s infinite;
     border-radius: 0 75px 0 75px;
+    position: relative;
 }
 
 
@@ -69,7 +75,7 @@ nav {
     left: calc(50% - 0.6rem);
     transform: rotate(45deg);
     margin-top: 1rem;
-    background-color: rgba(0, 0, 0, 0.232);
+    background-color: var(--primary-color);
 
 }
 
@@ -78,14 +84,16 @@ nav {
 
 @media screen and (max-width: 1024px){
     .nav__toggle-btn {
-        display: inline-block;
+        display: block;
         background: transparent;
         font-size: 3rem;
         cursor: pointer;
-        align-items: center;
-        justify-content: center;
     }
 
+    .nav__container h3 {
+        font-size: calc(1rem - .2rem);
+    }
+    
     .nav__toggle-btn svg {
         color: #fff;
     }
@@ -135,14 +143,13 @@ nav {
     }
 
     .nav__links li a {
-        background-color:rgba(0, 0, 0, 0.335);
+        background-color:var(--primary-color);
         height: 100%;
         width: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
         padding: 1rem 3rem 1.5rem 3rem;
-
     }
 
     .show__nav {

@@ -1,24 +1,33 @@
 import { Link } from 'react-router-dom'
 import '../pages/home/home.css'
-import ImageLogo from '../images/earthenImages/WhiteLogo.png'
+import Logo from '../images/earthenImages/WhiteLogo.png'
+// import PlanetEarth from '../images/earthenImages/PlanetEarth.png'
+
+import video from '../images/earthenImages/video2.mp4'
+
+
 
 const MainHeader = () => {
   return (
     <header className="main__header">
+      <video src={video} id="myVideo"   autoPlay loop ></video>
       <div className="container main__header-container">
         <div className="main__header-left">
           <h4>WELCOME TO THE <span className='spanColors'>FUTURE</span> OF <span className='spanColors'>ENERGY</span></h4>
-          <p style={{ background: "white", padding: "0 1rem", borderRadius: "0  75px 0 75px", maxWidth: "100px;" }}>#FutureEnergy</p>
-          <h1>Enabling Renewable Energy 24/7</h1>
-          <h1>Carbon-Free Earth</h1>
-          <Link to='/' className='btn lg'>LEARN MORE</Link>
+          <img src={Logo} className="bgMainLogo" alt="Main Logo" />
+          <p>Carbon Negative, Climate Positive Energy</p>
+          <h1>Enabling Renewable Energy 24/7 Carbon-Free Earth</h1>
+          <div className='btn-conatainer'>
+            <Link to='/' className='btn lg'>LEARN MORE</Link>
+          </div>
         </div>
         {/* <div className='main__header-right'>
-          <div className="main__header-circle"></div>
+          <img  src={PlanetEarth} className="main__header-earth" />
           <div className="main__header-image">
-            <img src={ImageLogo} alt="Main Header Image Logo" />
+          <img src={ImageLogo} alt="Main Header Image Logo" />
+          <p>Carbon Negative, Climate Positive Energy #FutureEnergy</p>
           </div>
-        </div> */}
+        </div>  */}
       </div>
 
     </header>
@@ -26,6 +35,10 @@ const MainHeader = () => {
 }
 
 export default MainHeader
+
+
+
+
 
 
 
