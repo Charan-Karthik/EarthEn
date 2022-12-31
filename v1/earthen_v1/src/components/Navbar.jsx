@@ -30,7 +30,7 @@ const Navbar = () => {
                         })
                     }
                 </ul>
-                <button className='nav__toggle-btn rotating' onClick={() => setIsNavShowing(!isNavShowing)}>
+                <Link className='nav__toggle-btn rotating' onClick={() => setIsNavShowing(!isNavShowing)}>
                     
                     {
                         isNavShowing ? <MdOutlineClose /> : <TbWindmill />
