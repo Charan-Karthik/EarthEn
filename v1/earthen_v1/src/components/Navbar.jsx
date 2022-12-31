@@ -4,8 +4,7 @@ import './navbar.css'
 import { Link, NavLink } from 'react-router-dom'
 import { links } from '../data'
 import { TbWindmill } from 'react-icons/tb'
-import { MdOutlineClose } from 'react-icons/md'
-import pin from '../images/earthenImages/pin.png'
+import {MdOutlineClose} from 'react-icons/md'
 
 const Navbar = () => {
     const [isNavShowing, setIsNavShowing] = useState(false)
@@ -30,10 +29,11 @@ const Navbar = () => {
                         })
                     }
                 </ul>
+                <h3>#Future Energy</h3>
                 <Link className='nav__toggle-btn rotating' onClick={() => setIsNavShowing(!isNavShowing)}>
                     
                     {
-                        isNavShowing ? <MdOutlineClose /> : <TbWindmill />
+                        isNavShowing ? <MdOutlineClose/> : <TbWindmill />
                     }
                 </Link>
             </div>
